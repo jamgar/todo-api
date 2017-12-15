@@ -21,7 +21,7 @@ require 'database_cleaner'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # by JEG
 # configure shoulda matchers to use rspec as the test framework and full matcher libraries for rails
@@ -81,4 +81,7 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
 end
