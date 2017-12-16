@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   scope module: :v1, constraints: ApiVersion.new('v1', true) do
+    resources :boards
     resources :todos do
       resources :items
     end
