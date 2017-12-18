@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :card do
     title { Faker::Lorem.word }
-    created_by { Faker::Number.number(10) }
+    board_id nil
   end
 end

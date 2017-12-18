@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   end
 
   scope module: :v1, constraints: ApiVersion.new('v1', true) do
-    resources :boards
+    resources :boards do
+      resources :cards do
+        resources :notes
+      end
+    end
+
+    # Used for reference
     resources :todos do
       resources :items
     end
