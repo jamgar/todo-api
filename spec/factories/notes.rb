@@ -1,7 +1,6 @@
 FactoryGirl.define do
-  factory :notes do
+  factory :note do
     content { Faker::StarWars.character }
-    #done false
     card_id nil
   end
 end
