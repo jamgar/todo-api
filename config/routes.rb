@@ -6,9 +6,7 @@ Rails.application.routes.draw do
 
   scope module: :v1, constraints: ApiVersion.new('v1', true) do
     resources :boards do
-      resources :cards do
-        resources :notes
-      end
+      resources :cards
     end
 
     # Used for reference

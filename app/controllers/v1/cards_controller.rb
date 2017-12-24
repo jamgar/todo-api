@@ -28,7 +28,7 @@ module V1
 
     private
       def card_params
-        params.permit(:title, :board_id)
+        params.permit(:content, :board_id)
       end
 
       def set_board
