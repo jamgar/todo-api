@@ -23,7 +23,8 @@ module TodoApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:8080'
+        origins 'determined-keller-0474d9.netlify.com'
+        # origins 'localhost:8080'
         resource '*', headers: :any, methods: [:get, :post, :put, :patch, :options, :head]
       end
     end
