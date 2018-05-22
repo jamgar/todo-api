@@ -18,7 +18,7 @@ module V1
 
     def update
       @board.update(board_params)
-      head :no_content
+      json_response(@board)
     end
 
     def destroy
